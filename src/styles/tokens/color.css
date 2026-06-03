@@ -1,0 +1,22 @@
+:root {
+  /* Backgrounds */
+  --color-background-primary: #f4f1ea;
+  --color-background-dark: #181a1b;
+
+  /* Surfaces */
+  --color-surface-primary: #ffffff;
+
+  /* Typography */
+  --color-text-primary: #2d2a26;
+  --color-text-secondary: #7a7267;
+
+  --color-text-inverse: #ffffff;
+  --color-text-inverse-muted: #e3dfd5;
+
+  /* Actions */
+  --color-action-primary: #a89276;
+  --color-action-hover: #8c7e6e;
+
+  /* Borders */
+  --color-border-light: #e3dfd5;
+}
