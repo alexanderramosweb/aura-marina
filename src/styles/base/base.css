@@ -1,0 +1,82 @@
+/* ==========================================
+   HTML
+========================================== */
+
+html {
+  font-size: 100%;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+
+  color: var(--color-text-primary);
+  background-color: var(--color-background-primary);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+
+  color: inherit;
+
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+p {
+  text-wrap: pretty;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+button {
+  font: inherit;
+
+  cursor: pointer;
+
+  border: none;
+  background: none;
+}
+
+/* ==========================================
+   MEDIA
+========================================== */
+
+img {
+  height: auto;
+}
