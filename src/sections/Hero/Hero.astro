@@ -1,8 +1,53 @@
 ---
 import Container from "../../components/Container/Container.astro";
+import "./Hero.css";
+
+import heroDesktopAvif from "../../assets/images/hero/hero-desktop.avif";
+import heroDesktopWebp from "../../assets/images/hero/hero-desktop.webp";
+
+import heroMobileAvif from "../../assets/images/hero/hero-mobile.avif";
+import heroMobileWebp from "../../assets/images/hero/hero-mobile.webp";
+
+import "./Hero.css";
 ---
 
 <section id="hero" class="hero" aria-labelledby="hero-title">
+  <div class="hero__media" aria-hidden="true">
+    <picture>
+      <source
+        media="(max-width: 768px)"
+        srcset={heroMobileAvif.src}
+        type="image/avif"
+      />
+
+      <source
+        media="(max-width: 768px)"
+        srcset={heroMobileWebp.src}
+        type="image/webp"
+      />
+
+      <source
+        media="(min-width: 769px)"
+        srcset={heroDesktopAvif.src}
+        type="image/avif"
+      />
+
+      <source
+        media="(min-width: 769px)"
+        srcset={heroDesktopWebp.src}
+        type="image/webp"
+      />
+
+      <img
+        src={heroDesktopWebp.src}
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
+  </div>
+
   <div class="hero__overlay" aria-hidden="true"></div>
 
   <Container>
