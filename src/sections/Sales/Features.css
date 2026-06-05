@@ -1,0 +1,76 @@
+/* ==========================================
+   FEATURES SECTION
+========================================== */
+
+.features {
+  position: relative;
+
+  margin-top: -3rem;
+
+  z-index: 10;
+}
+
+/* ==========================================
+   FEATURES WRAPPER
+========================================== */
+
+.features__wrapper {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 63.9375rem; /* 1023px */
+
+  margin-left: auto;
+
+  padding: var(--space-8);
+
+  gap: var(--space-8);
+
+  border-radius: 2rem;
+
+  background-color: var(--color-background-dark);
+}
+
+/* ==========================================
+   FEATURE CARD
+========================================== */
+
+.feature-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-4);
+
+  flex: 1;
+}
+
+/* ==========================================
+   FEATURE ICON
+========================================== */
+
+.feature-card img {
+  flex-shrink: 0;
+
+  width: 2rem;
+  height: 2rem;
+}
+
+/* ==========================================
+   FEATURE DESCRIPTION
+========================================== */
+
+.feature-card__description {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.4;
+
+  color: var(--color-text-inverse);
+}

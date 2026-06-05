@@ -1,0 +1,54 @@
+---
+import Container from "../../components/Container/Container.astro";
+import "./Features.css";
+
+import featureIcon from "../../assets/icons/sparklesicon.svg";
+---
+
+<section id="features" class="features" aria-label="Beneficios principales">
+  <Container>
+    <div class="features__wrapper">
+      <article class="feature-card">
+        <img
+          src={featureIcon.src}
+          alt=""
+          aria-hidden="true"
+          width="32"
+          height="32"
+        />
+
+        <p class="feature-card__description">
+          Vistas panorámicas al mar y a las montañas
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <img
+          src={featureIcon.src}
+          alt=""
+          aria-hidden="true"
+          width="32"
+          height="32"
+        />
+
+        <p class="feature-card__description">
+          Materiales y arquitectura premium
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <img
+          src={featureIcon.src}
+          alt=""
+          aria-hidden="true"
+          width="32"
+          height="32"
+        />
+
+        <p class="feature-card__description">
+          Servicio con los más altos estándares
+        </p>
+      </article>
+    </div>
+  </Container>
+</section>
