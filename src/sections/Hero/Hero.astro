@@ -1,6 +1,8 @@
 ---
-import Container from "../../components/Container/Container.astro";
+import Container from "../../components/container/Container.astro";
 import "./Hero.css";
+
+import Button from "../../components/Button/Button.astro";
 
 import heroDesktopAvif from "../../assets/images/hero/hero-desktop.avif";
 import heroDesktopWebp from "../../assets/images/hero/hero-desktop.webp";
@@ -57,7 +59,9 @@ import "./Hero.css";
 
         <div class="hero__title-wrapper">
           <h1 id="hero-title" class="hero__title">
-            Tu casa frente al mar en Santa Marta sin condiciones.
+            Tu casa frente al mar en <span class="hero__title-highlight"
+              >Santa Marta</span
+            > sin condiciones.
           </h1>
 
           <p class="hero__subtitle">
@@ -68,7 +72,7 @@ import "./Hero.css";
       </header>
 
       <div class="hero__cta-wrapper">
-        <a href="#contacto" class="hero__button"> Reservar visita </a>
+        <Button href="#contacto"> Reservar visita </Button>
 
         <p class="hero__cta-note">
           Asegure su lugar en el Caribe más exclusivo.

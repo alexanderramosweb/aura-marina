@@ -14,67 +14,6 @@
 }
 
 /* ==========================================
-   HERO OVERLAY
-========================================== */
-
-.hero__overlay {
-  position: absolute;
-  inset: 0;
-
-  pointer-events: none;
-}
-
-/* ==========================================
-   HERO CONTENT
-========================================== */
-
-.hero__content {
-  position: relative;
-  z-index: 1;
-
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-  max-width: 42.5rem;
-}
-
-/* ==========================================
-   HERO HEADING GROUP
-========================================== */
-
-.hero__heading-group {
-  display: flex;
-  flex-direction: column;
-
-  gap: var(--space-4);
-}
-
-/* ==========================================
-   HERO TITLE WRAPPER
-========================================== */
-
-.hero__title-wrapper {
-  display: flex;
-  flex-direction: column;
-
-  gap: var(--space-3);
-  max-width: 33.75rem;
-}
-/* ==========================================
-   HERO CTA WRAPPER
-========================================== */
-
-.hero__cta-wrapper {
-  display: flex;
-  flex-direction: column;
-
-  gap: var(--space-2);
-
-  margin-top: var(--space-12);
-}
-
-/* ==========================================
    HERO MEDIA
 ========================================== */
 
@@ -123,4 +62,128 @@
     rgba(244, 241, 234, 0.1) 50%,
     rgba(244, 241, 234, 0) 100%
   );
+}
+
+/* ==========================================
+   HERO CONTENT
+========================================== */
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 42.5rem;
+}
+
+/* ==========================================
+   HERO HEADING GROUP
+========================================== */
+
+.hero__heading-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-4);
+}
+
+/* ==========================================
+   HERO TITLE WRAPPER
+========================================== */
+
+.hero__title-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-3);
+  max-width: 32.5rem;
+}
+
+/* ==========================================
+   HERO EYEBROW
+========================================== */
+
+.hero__eyebrow {
+  font-family: var(--font-body);
+
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1.714;
+
+  letter-spacing: 0.25rem;
+
+  text-transform: uppercase;
+
+  color: var(--color-text-primary);
+}
+
+/* ==========================================
+   HERO TITLE
+========================================== */
+
+.hero__title {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+
+  line-height: 1.0625;
+
+  color: var(--color-text-primary);
+}
+.hero__title-highlight {
+  color: var(--color-action-primary);
+}
+
+/* ==========================================
+   HERO SUBTITLE
+========================================== */
+.hero__subtitle {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-regular);
+
+  line-height: 1.333;
+
+  color: var(--color-text-secondary);
+  max-width: 28rem;
+}
+
+/* ==========================================
+   HERO CTA WRAPPER
+========================================== */
+
+.hero__cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: var(--space-2);
+
+  margin-top: var(--space-12);
+}
+
+/* ==========================================
+   HERO CTA NOTE
+========================================== */
+
+.hero__cta-note {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-small);
+  font-weight: var(--fw-regular);
+
+  line-height: 1.714;
+
+  color: var(--color-text-primary);
 }

@@ -1,0 +1,40 @@
+/* ==========================================
+   BUTTON
+========================================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 3.25rem;
+
+  padding-inline: var(--space-8);
+
+  border: none;
+  border-radius: var(--radius-full);
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+
+  text-decoration: none;
+
+  color: var(--color-background-dark);
+  background-color: var(--color-action-primary);
+
+  cursor: pointer;
+
+  transition:
+    background-color 200ms ease,
+    transform 200ms ease;
+}
+
+.button:hover {
+  background-color: var(--color-action-hover);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 4px;
+}
