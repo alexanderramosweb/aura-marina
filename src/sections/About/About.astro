@@ -1,0 +1,40 @@
+---
+import Container from "../../components/container/Container.astro";
+import aboutAvif from "../../assets/images/about/about-image.avif";
+import aboutWebp from "../../assets/images/about/about-image.webp";
+import "./About.css";
+---
+
+<section id="about" class="about">
+  <Container>
+    <div class="about__layout">
+      <div class="about__content">
+        <h2 class="about__title">Un refugio privado frente al mar.</h2>
+
+        <p class="about__description">
+          Aura Marina es un conjunto de villas modernas en la zona más
+          privilegiada de Santa Marta.
+        </p>
+        <p class="about__description">
+          Diseñadas para combinar arquitectura contemporánea con el estilo de
+          vida caribeño, ofrecen lujo, comodidad y conexión con el mar.
+        </p>
+      </div>
+
+      <div class="about__media">
+        <picture>
+          <source srcset={aboutAvif.src} type="image/avif" />
+
+          <source srcset={aboutWebp.src} type="image/webp" />
+
+          <img
+            src={aboutWebp.src}
+            alt="Vista del proyecto Aura Marina"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+      </div>
+    </div>
+  </Container>
+</section>
