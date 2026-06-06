@@ -1,0 +1,73 @@
+---
+import Container from "../../components/Container/Container.astro";
+import "./Advantages.css";
+
+import beachIcon from "../../assets/icons/beach.svg";
+import natureIcon from "../../assets/icons/nature.svg";
+import poolIcon from "../../assets/icons/pool.svg";
+import shieldIcon from "../../assets/icons/shield.svg";
+---
+
+<section id="advantages" class="advantages" aria-labelledby="advantages-title">
+  <Container>
+    <div class="advantages__layout">
+      <h2 id="advantages-title" class="advantages__title">
+        Ventajas exclusivas
+      </h2>
+
+      <article class="advantage-card">
+        <img
+          src={beachIcon.src}
+          alt=""
+          aria-hidden="true"
+          width="48"
+          height="48"
+        />
+
+        <p class="advantage-card__description">
+          Cercanía inmediata al mar Caribe
+        </p>
+      </article>
+
+      <article class="advantage-card">
+        <img
+          src={natureIcon.src}
+          alt=""
+          aria-hidden="true"
+          width="48"
+          height="48"
+        />
+
+        <p class="advantage-card__description">
+          Terreno privado con jardines tropicales
+        </p>
+      </article>
+
+      <article class="advantage-card">
+        <img
+          src={poolIcon.src}
+          alt=""
+          aria-hidden="true"
+          width="48"
+          height="48"
+        />
+
+        <p class="advantage-card__description">Piscina privada en cada villa</p>
+      </article>
+
+      <article class="advantage-card">
+        <img
+          src={shieldIcon.src}
+          alt=""
+          aria-hidden="true"
+          width="48"
+          height="48"
+        />
+
+        <p class="advantage-card__description">
+          Seguridad y administración 24/7
+        </p>
+      </article>
+    </div>
+  </Container>
+</section>

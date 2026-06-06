@@ -1,0 +1,79 @@
+/* ==========================================
+   ADVANTAGES SECTION
+========================================== */
+
+.advantages {
+  background-color: var(--color-border-light);
+  padding-block: var(--space-3);
+}
+/* ==========================================
+   ADVANTAGES LAYOUT
+========================================== */
+
+.advantages__layout {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-12);
+}
+/* ==========================================
+   ADVANTAGES TITLE
+========================================== */
+
+.advantages__title {
+  font-family: var(--font-display);
+
+  font-size: var(--fs-h2);
+
+  font-weight: var(--fw-bold);
+
+  line-height: 1.1;
+
+  color: var(--color-background-dark);
+
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   ADVANTAGE CARD
+========================================== */
+
+.advantage-card {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+
+  gap: var(--space-4);
+
+  flex: 1;
+}
+
+/* ==========================================
+   ADVANTAGE ICON
+========================================== */
+
+.advantage-card img {
+  width: 3rem;
+  height: 3rem;
+
+  flex-shrink: 0;
+}
+/* ==========================================
+   ADVANTAGE DESCRIPTION
+========================================== */
+
+.advantage-card__description {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-body);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.1;
+
+  color: var(--color-text-primary);
+}
