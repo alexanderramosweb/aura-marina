@@ -1,0 +1,36 @@
+/* ==========================================
+   PRICING SECTION
+========================================== */
+
+.pricing {
+  padding-block: var(--space-20);
+}
+
+/* ==========================================
+   PRICING TITLE
+========================================== */
+
+.pricing__title {
+  font-family: var(--font-display);
+
+  font-size: var(--fs-h2);
+
+  font-weight: var(--fw-bold);
+
+  line-height: 1.1;
+
+  color: var(--color-background-dark);
+
+  margin-bottom: var(--space-12);
+}
+/* ==========================================
+   PRICING GRID
+========================================== */
+
+.pricing__grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: var(--space-8);
+}

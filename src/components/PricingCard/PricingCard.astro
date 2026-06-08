@@ -1,0 +1,44 @@
+---
+import "./PricingCard.css";
+
+interface Props {
+  imageAvif: string;
+  imageWebp: string;
+
+  title: string;
+  features: string[];
+  price: string;
+}
+
+const { imageAvif, imageWebp, title, features, price } = Astro.props;
+---
+
+<article class="pricing-card">
+  <div class="pricing-card__image">
+    <picture>
+      <source srcset={imageAvif} type="image/avif" />
+
+      <source srcset={imageWebp} type="image/webp" />
+
+      <img src={imageWebp} alt={title} loading="lazy" decoding="async" />
+    </picture>
+  </div>
+
+  <div class="pricing-card__content">
+    <h3 class="pricing-card__title">
+      {title}
+    </h3>
+
+    <div class="pricing-card__features">
+      {
+        features.map((feature) => (
+          <span class="pricing-card__feature">{feature}</span>
+        ))
+      }
+    </div>
+
+    <p class="pricing-card__price">
+      {price}
+    </p>
+  </div>
+</article>

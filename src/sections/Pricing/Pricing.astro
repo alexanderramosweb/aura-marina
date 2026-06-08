@@ -1,0 +1,47 @@
+---
+import Container from "../../components/Container/Container.astro";
+import PricingCard from "../../components/PricingCard/PricingCard.astro";
+
+import "./Pricing.css";
+
+import villaA1Avif from "../../assets/images/pricing/villa-a1.avif";
+import villaA1Webp from "../../assets/images/pricing/villa-a1.webp";
+
+import villaB1Avif from "../../assets/images/pricing/villa-b1.avif";
+import villaB1Webp from "../../assets/images/pricing/villa-b1.webp";
+
+import villaC1Avif from "../../assets/images/pricing/villa-c1.avif";
+import villaC1Webp from "../../assets/images/pricing/villa-c1.webp";
+---
+
+<section id="pricing" class="pricing" aria-labelledby="pricing-title">
+  <Container>
+    <h2 id="pricing-title" class="pricing__title">Modelos disponibles</h2>
+
+    <div class="pricing__grid">
+      <PricingCard
+        imageAvif={villaA1Avif.src}
+        imageWebp={villaA1Webp.src}
+        title="Villa A1"
+        features={["3 Habitaciones", "180 m²"]}
+        price="Desde $1.250 M COP"
+      />
+
+      <PricingCard
+        imageAvif={villaB1Avif.src}
+        imageWebp={villaB1Webp.src}
+        title="Villa B1"
+        features={["4 Habitaciones", "220 m²"]}
+        price="Desde $1.850 M COP"
+      />
+
+      <PricingCard
+        imageAvif={villaC1Avif.src}
+        imageWebp={villaC1Webp.src}
+        title="Villa C1"
+        features={["5 Habitaciones", "280 m²"]}
+        price="Desde $2.400 M COP"
+      />
+    </div>
+  </Container>
+</section>
