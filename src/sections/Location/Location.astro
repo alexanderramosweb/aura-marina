@@ -1,0 +1,53 @@
+---
+import Container from "../../components/container/Container.astro";
+import LocationCard from "../../components/LocationCard/LocationCard.astro";
+
+import "./Location.css";
+
+import playasAvif from "../../assets/images/location/location-playas-turisticas.avif";
+import playasWebp from "../../assets/images/location/location-playas-turisticas.webp";
+
+import centroAvif from "../../assets/images/location/location-centro-historico.avif";
+import centroWebp from "../../assets/images/location/location-centro-historico.webp";
+
+import sierraAvif from "../../assets/images/location/location-sierra-nevada.avif";
+import sierraWebp from "../../assets/images/location/location-sierra-nevada.webp";
+---
+
+<section id="location" class="location" aria-labelledby="location-title">
+  <Container>
+    <div class="location__layout">
+      <div class="location__content">
+        <h2 id="location-title" class="location__title">
+          Ubicación privilegiada
+        </h2>
+
+        <p class="location__description">
+          Aura Marina está situada en el corazón de Santa Marta, rodeada de
+          playas paradisíacas, la marina y el centro histórico. Un entorno que
+          combina naturaleza, exclusividad y conectividad.
+        </p>
+      </div>
+
+      <div class="location__media">
+        <LocationCard
+          imageAvif={playasAvif.src}
+          imageWebp={playasWebp.src}
+          title="Playas exclusivas"
+        />
+
+        <LocationCard
+          imageAvif={centroAvif.src}
+          imageWebp={centroWebp.src}
+          title="Centro histórico"
+        />
+
+        <LocationCard
+          imageAvif={sierraAvif.src}
+          imageWebp={sierraWebp.src}
+          title="Naturaleza y Sierra Nevada"
+        />
+      </div>
+    </div>
+  </Container>
+</section>
