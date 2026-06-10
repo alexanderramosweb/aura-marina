@@ -1,0 +1,45 @@
+---
+import Container from "../../components/container/Container.astro";
+
+import whatsappIcon from "../../assets/icons/whatsapp.svg";
+import instagramIcon from "../../assets/icons/instagram.svg";
+
+import "./Footer.css";
+---
+
+<footer class="footer">
+  <Container>
+    <div class="footer__layout">
+      <div class="footer__brand-wrapper">
+        <p class="footer__brand-name">AURA MARINA</p>
+      </div>
+
+      <div class="footer__socials">
+        <a href="#" class="footer__social-link" aria-label="WhatsApp">
+          <img src={whatsappIcon.src} alt="" class="footer__social-icon" />
+        </a>
+
+        <a href="#" class="footer__social-link" aria-label="Instagram">
+          <img src={instagramIcon.src} alt="" class="footer__social-icon" />
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__divider"></div>
+
+    <div class="footer__copyright-wrapper">
+      <p class="footer__copyright">© 2026 Aura Marina Residences.</p>
+
+      <p class="footer__copyright">Todos los derechos reservados.</p>
+
+      <p class="footer__copyright">
+        Proyecto inmobiliario exclusivo en Santa Marta, Colombia.
+      </p>
+
+      <p class="footer__copyright">
+        Las imágenes, precios y especificaciones son referenciales y pueden
+        variar sin previo aviso.
+      </p>
+    </div>
+  </Container>
+</footer>

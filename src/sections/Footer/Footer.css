@@ -1,0 +1,88 @@
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+  background-color: var(--color-background-dark);
+
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+/* ==========================================
+   FOOTER LAYOUT
+========================================== */
+
+.footer__layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* ==========================================
+   FOOTER BRAND
+========================================== */
+
+.footer__brand-name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-surface-primary);
+}
+/* ==========================================
+   FOOTER SOCIALS
+========================================== */
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-4);
+}
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+/* ==========================================
+   FOOTER DIVIDER
+========================================== */
+
+.footer__divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.12);
+
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+}
+/* ==========================================
+   FOOTER COPYRIGHT
+========================================== */
+
+.footer__copyright-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: var(--space-2);
+
+  text-align: center;
+}
+.footer__copyright {
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-regular);
+
+  color: var(--color-surface-primary);
+}
