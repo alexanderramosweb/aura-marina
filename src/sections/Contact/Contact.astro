@@ -1,0 +1,102 @@
+---
+import Container from "../../components/container/Container.astro";
+
+import contactAvif from "../../assets/images/contact/cta-img.avif";
+import contactWebp from "../../assets/images/contact/cta-img.webp";
+import telephoneIcon from "../../assets/icons/telephone.svg";
+import emailIcon from "../../assets/icons/email.svg";
+import locationIcon from "../../assets/icons/location.svg";
+
+import "./Contact.css";
+---
+
+<section id="contact" class="contact" aria-labelledby="contact-title">
+  <div class="contact__media" aria-hidden="true">
+    <picture>
+      <source srcset={contactAvif.src} type="image/avif" />
+
+      <source srcset={contactWebp.src} type="image/webp" />
+
+      <img src={contactWebp.src} alt="" loading="lazy" decoding="async" />
+    </picture>
+  </div>
+
+  <div class="contact__overlay" aria-hidden="true"></div>
+
+  <Container>
+    <div class="contact__layout">
+      <div class="contact__content">
+        <div class="contact__info">
+          <h2 id="contact-title" class="contact__title">AURA MARINA</h2>
+
+          <p class="contact__description">
+            Reserva tu villa en el lugar más exclusivo de Santa Marta
+          </p>
+        </div>
+
+        <div class="contact__details">
+          <div class="contact__detail">
+            <img
+              src={telephoneIcon.src}
+              alt=""
+              class="contact__icon"
+              aria-hidden="true"
+            />
+
+            <span class="contact__text"> +57 300 123 45 67 </span>
+          </div>
+
+          <div class="contact__detail">
+            <img
+              src={emailIcon.src}
+              alt=""
+              class="contact__icon"
+              aria-hidden="true"
+            />
+
+            <span class="contact__text"> info@auramarina.co </span>
+          </div>
+
+          <div class="contact__detail">
+            <img
+              src={locationIcon.src}
+              alt=""
+              class="contact__icon"
+              aria-hidden="true"
+            />
+
+            <span class="contact__text">
+              Santa Marta, Magdalena, Colombia
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact__form">
+        <div class="contact__form-column">
+          <input class="contact__input" type="text" placeholder="Nombre" />
+
+          <input
+            class="contact__input"
+            type="tel"
+            placeholder="Teléfono / WhatsApp"
+          />
+
+          <input class="contact__input" type="email" placeholder="Email" />
+        </div>
+
+        <div class="contact__form-column">
+          <textarea
+            class="contact__textarea"
+            placeholder="Cuéntanos qué tipo de villa estás buscando"></textarea>
+
+          <button type="submit" class="contact__button">
+            <span>Hablar con asesor</span>
+
+            <span class="contact__button-icon" aria-hidden="true"> → </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </Container>
+</section>

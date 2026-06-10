@@ -1,0 +1,301 @@
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.contact {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-block: var(--space-20);
+}
+/* ==========================================
+   CONTACT MEDIA
+========================================== */
+
+.contact__media {
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+}
+/* ==========================================
+   CONTACT IMAGE
+========================================== */
+
+.contact__media picture,
+.contact__media img {
+  width: 100%;
+  height: 100%;
+}
+
+.contact__media img {
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+/* ==========================================
+   CONTACT OVERLAY
+========================================== */
+
+.contact__overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.98) 0%,
+    rgba(0, 0, 0, 0.85) 45%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+}
+
+.contact__layout {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: var(--space-12);
+
+  align-items: start;
+}
+/* ==========================================
+   CONTACT CONTENT
+========================================== */
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-10);
+}
+/* ==========================================
+   CONTACT INFO
+========================================== */
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-4);
+}
+/* ==========================================
+   CONTACT TITLE
+========================================== */
+
+.contact__title {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: var(--fs-h2);
+
+  font-weight: var(--fw-bold);
+
+  line-height: 1.1;
+
+  color: var(--color-surface-primary);
+}
+/* ==========================================
+   CONTACT DESCRIPTION
+========================================== */
+
+.contact__description {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-body);
+
+  font-weight: var(--fw-regular);
+
+  line-height: var(--lh-body);
+
+  color: var(--color-surface-primary);
+}
+/* ==========================================
+   CONTACT DETAILS
+========================================== */
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-4);
+}
+/* ==========================================
+   CONTACT DETAIL
+========================================== */
+
+.contact__detail {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-3);
+}
+/* ==========================================
+   CONTACT ICON
+========================================== */
+
+.contact__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  flex-shrink: 0;
+}
+/* ==========================================
+   CONTACT TEXT
+========================================== */
+
+.contact__text {
+  font-family: var(--font-body);
+
+  font-size: var(--fs-body);
+
+  font-weight: var(--fw-regular);
+
+  line-height: var(--lh-body);
+
+  color: var(--color-surface-primary);
+}
+/* ==========================================
+   CONTACT FORM
+========================================== */
+
+.contact__form {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: var(--space-6);
+}
+/* ==========================================
+   CONTACT FORM COLUMN
+========================================== */
+
+.contact__form-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-4);
+}
+/* ==========================================
+   CONTACT INPUT
+========================================== */
+
+.contact__input {
+  width: 100%;
+
+  padding: 0.625rem 1rem;
+
+  border: 1px solid var(--color-border-light);
+  border-radius: 0.5rem;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  backdrop-filter: blur(6px);
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+
+  color: var(--color-surface-primary);
+}
+/* ==========================================
+   CONTACT PLACEHOLDER
+========================================== */
+
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+}
+.contact__input:focus,
+.contact__textarea:focus {
+  outline: none;
+
+  border-color: var(--color-action-primary);
+}
+/* ==========================================
+   CONTACT TEXTAREA
+========================================== */
+
+.contact__textarea {
+  width: 100%;
+
+  height: 7rem;
+
+  padding: 0.75rem 1rem;
+
+  border: 1px solid var(--color-border-light);
+  border-radius: 0.5rem;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  backdrop-filter: blur(6px);
+
+  resize: none;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+
+  color: var(--color-surface-primary);
+}
+/* ==========================================
+   CONTACT BUTTON
+========================================== */
+
+.contact__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--space-2);
+
+  width: 100%;
+
+  min-height: 3rem;
+
+  padding: 0.75rem 2rem;
+
+  border: none;
+  border-radius: 999px;
+
+  background-color: var(--color-action-primary);
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-background-dark);
+
+  cursor: pointer;
+
+  transition:
+    transform 200ms ease,
+    opacity 200ms ease;
+}
+.contact__button:hover {
+  opacity: 0.95;
+
+  transform: translateY(-1px);
+}
+/* ==========================================
+   CONTACT BUTTON ICON
+========================================== */
+
+.contact__button-icon {
+  display: flex;
+  align-items: center;
+}
