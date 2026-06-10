@@ -1,0 +1,53 @@
+/* ==========================================
+   LOCATION CARD
+========================================== */
+
+.location-card {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-2);
+}
+
+/* ==========================================
+   LOCATION CARD IMAGE
+========================================== */
+
+.location-card__image {
+  overflow: hidden;
+
+  border-radius: 1rem;
+}
+
+.location-card__image picture,
+.location-card__image img {
+  display: block;
+
+  width: 100%;
+}
+
+.location-card__image img {
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+}
+
+/* ==========================================
+   LOCATION CARD TITLE
+========================================== */
+
+.location-card__title {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-small);
+
+  font-weight: var(--fw-medium);
+
+  line-height: 1.2;
+
+  color: var(--color-background-dark);
+
+  text-align: center;
+}

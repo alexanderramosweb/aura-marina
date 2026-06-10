@@ -1,0 +1,27 @@
+---
+import "./LocationCard.css";
+
+interface Props {
+  imageAvif: string;
+  imageWebp: string;
+  title: string;
+}
+
+const { imageAvif, imageWebp, title }: Props = Astro.props;
+---
+
+<article class="location-card">
+  <div class="location-card__image">
+    <picture>
+      <source srcset={imageAvif} type="image/avif" />
+
+      <source srcset={imageWebp} type="image/webp" />
+
+      <img src={imageWebp} alt={title} loading="lazy" decoding="async" />
+    </picture>
+  </div>
+
+  <h3 class="location-card__title">
+    {title}
+  </h3>
+</article>
