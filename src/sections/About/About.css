@@ -47,7 +47,7 @@
 
   line-height: 1.1;
 
-  font-size: 2rem;
+  font-size: var(--fs-h2);
 }
 /* ==========================================
    ABOUT DESCRIPTION
@@ -92,4 +92,35 @@
 
   object-fit: cover;
   object-position: center;
+}
+/* ==========================================
+   ABOUT RESPONSIVE
+   Tablet ≤ 1024px
+========================================== */
+
+@media (max-width: 1024px) {
+  .about__layout {
+    gap: var(--space-8);
+  }
+}
+
+/* ==========================================
+   ABOUT RESPONSIVE
+   Mobile ≤ 768px
+========================================== */
+
+@media (max-width: 768px) {
+  .about__layout {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-8);
+  }
+
+  .about__content {
+    max-width: 100%;
+  }
+
+  .about__media {
+    aspect-ratio: 16 / 9;
+  }
 }
