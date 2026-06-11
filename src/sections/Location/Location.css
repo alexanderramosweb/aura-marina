@@ -66,7 +66,6 @@
   line-height: 1.6;
 
   color: var(--color-text-primary);
-  align-items: self-start;
 }
 
 /* ==========================================
@@ -79,4 +78,46 @@
   grid-template-columns: repeat(3, 1fr);
 
   gap: 1rem;
+}
+
+/* ==========================================
+   LOCATION RESPONSIVE
+   Tablet ≤ 1024px
+========================================== */
+
+@media (max-width: 1024px) {
+  .location__layout {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-8);
+  }
+
+  .location__content {
+    max-width: 42rem;
+  }
+}
+
+/* ==========================================
+   LOCATION RESPONSIVE
+   Mobile ≤ 768px
+========================================== */
+
+@media (max-width: 768px) {
+  .location__media {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-6);
+  }
+
+  .location__content {
+    gap: var(--space-3);
+  }
+
+  .location__title {
+    text-align: center;
+  }
+
+  .location__description {
+    text-align: left;
+  }
 }
