@@ -299,3 +299,65 @@
   display: flex;
   align-items: center;
 }
+
+/* ==========================================
+   CONTACT RESPONSIVE
+   Tablet ≤ 1024px
+========================================== */
+
+@media (max-width: 1024px) {
+  .contact__layout {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-10);
+  }
+
+  .contact__content {
+    max-width: 42rem;
+  }
+}
+/* ==========================================
+   CONTACT RESPONSIVE
+   Mobile ≤ 768px
+========================================== */
+
+@media (max-width: 768px) {
+  .contact__layout {
+    gap: var(--space-8);
+  }
+  .contact__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+  }
+
+  .contact__info {
+    text-align: left;
+  }
+
+  .contact__detail {
+    justify-content: left;
+  }
+
+  .contact__form {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-4);
+  }
+
+  .contact__title {
+    text-align: center;
+  }
+
+  .contact__description {
+    text-align: center;
+  }
+
+  .contact__input,
+  .contact__textarea,
+  .contact__button {
+    width: 100%;
+  }
+}
