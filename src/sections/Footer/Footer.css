@@ -86,3 +86,32 @@
 
   color: var(--color-surface-primary);
 }
+
+/* ==========================================
+   FOOTER RESPONSIVE
+   Mobile ≤ 768px
+========================================== */
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-10);
+  }
+
+  .footer__layout {
+    flex-direction: column;
+
+    gap: var(--space-6);
+
+    text-align: center;
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .footer__divider {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-6);
+  }
+}
