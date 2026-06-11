@@ -34,3 +34,33 @@
 
   gap: var(--space-8);
 }
+
+/* ==========================================
+   PRICING RESPONSIVE
+   Tablet ≤ 1024px
+========================================== */
+
+@media (max-width: 1024px) {
+  .pricing__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================
+   PRICING RESPONSIVE
+   Mobile ≤ 768px
+========================================== */
+
+@media (max-width: 768px) {
+  .pricing__title {
+    margin-bottom: var(--space-8);
+
+    text-align: center;
+  }
+
+  .pricing__grid {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-6);
+  }
+}

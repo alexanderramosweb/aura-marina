@@ -88,3 +88,14 @@
 
   color: var(--color-background-dark);
 }
+
+/* ==========================================
+   PRICING CARD RESPONSIVE
+   Mobile ≤ 768px
+========================================== */
+
+@media (max-width: 768px) {
+  .pricing-card__content {
+    padding: var(--space-5);
+  }
+}
