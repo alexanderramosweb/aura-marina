@@ -77,3 +77,43 @@
 
   color: var(--color-text-primary);
 }
+
+/* ==========================================
+   ADVANTAGES RESPONSIVE
+   Tablet ≤ 1024px
+========================================== */
+
+@media (max-width: 1024px) {
+  .advantages__layout {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: var(--space-8);
+  }
+
+  .advantages__title {
+    grid-column: 1 / -1;
+
+    text-align: center;
+  }
+}
+
+/* ==========================================
+   ADVANTAGES RESPONSIVE
+   Mobile ≤ 768px
+========================================== */
+
+@media (max-width: 768px) {
+  .advantages__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages__title {
+    text-align: center;
+  }
+
+  .advantage-card {
+    width: 100%;
+  }
+}
