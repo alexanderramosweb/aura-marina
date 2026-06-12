@@ -283,13 +283,23 @@
   cursor: pointer;
 
   transition:
+    background-color 200ms ease,
     transform 200ms ease,
     opacity 200ms ease;
 }
 .contact__button:hover {
   opacity: 0.95;
 
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+}
+
+.contact__button:active {
+  transform: translateY(0);
+}
+
+.contact__button:focus-visible {
+  outline: 2px solid var(--color-surface-primary);
+  outline-offset: 4px;
 }
 /* ==========================================
    CONTACT BUTTON ICON

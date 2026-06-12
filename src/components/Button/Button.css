@@ -32,9 +32,14 @@
 
 .button:hover {
   background-color: var(--color-action-hover);
+
+  transform: translateY(-2px);
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--color-text-primary);
+  outline: 2px solid var(--color-action-primary);
   outline-offset: 4px;
+}
+.button:active {
+  transform: translateY(0);
 }
