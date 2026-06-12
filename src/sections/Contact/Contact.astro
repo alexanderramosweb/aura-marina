@@ -18,7 +18,14 @@ import "./Contact.css";
 
       <source srcset={contactWebp.src} type="image/webp" />
 
-      <img src={contactWebp.src} alt="" loading="lazy" decoding="async" />
+      <img
+        src={contactWebp.src}
+        alt=""
+        width={contactWebp.width}
+        height={contactWebp.height}
+        loading="lazy"
+        decoding="async"
+      />
     </picture>
   </div>
 
