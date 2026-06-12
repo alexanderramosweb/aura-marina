@@ -13,7 +13,7 @@ interface Props {
 const { imageAvif, imageWebp, title, features, price } = Astro.props;
 ---
 
-<article class="pricing-card">
+<article class="pricing-card" data-animate="pricing-card">
   <div class="pricing-card__image">
     <picture>
       <source srcset={imageAvif} type="image/avif" />

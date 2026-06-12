@@ -10,7 +10,7 @@ interface Props {
 const { imageAvif, imageWebp, title }: Props = Astro.props;
 ---
 
-<article class="location-card">
+<article class="location-card" data-animate="location-card">
   <div class="location-card__image">
     <picture>
       <source srcset={imageAvif} type="image/avif" />
