@@ -34,5 +34,10 @@ const {
 
   <body>
     <slot />
+    <script>
+      import("../animations").then(({ initAnimations }) => {
+        initAnimations();
+      });
+    </script>
   </body>
 </html>
