@@ -207,25 +207,13 @@
   font-weight: var(--fw-regular);
 
   color: var(--color-surface-primary);
-}
-/* ==========================================
-   CONTACT PLACEHOLDER
-========================================== */
 
-.contact__input::placeholder,
-.contact__textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-
-  font-family: var(--font-body);
-  font-size: var(--fs-body);
-  font-weight: var(--fw-regular);
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease,
+    box-shadow 200ms ease;
 }
-.contact__input:focus,
-.contact__textarea:focus {
-  outline: none;
 
-  border-color: var(--color-action-primary);
-}
 /* ==========================================
    CONTACT TEXTAREA
 ========================================== */
@@ -251,6 +239,42 @@
   font-weight: var(--fw-regular);
 
   color: var(--color-surface-primary);
+
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+/* ==========================================
+   CONTACT INPUT INTERACTIONS
+========================================== */
+
+.contact__input:hover,
+.contact__textarea:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  outline: none;
+
+  border-color: var(--color-action-primary);
+
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.06);
+}
+
+/* ==========================================
+   CONTACT PLACEHOLDER
+========================================== */
+
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
 }
 /* ==========================================
    CONTACT BUTTON
