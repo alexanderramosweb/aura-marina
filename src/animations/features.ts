@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export function initFeatures() {
   const wrapper = document.querySelector('[data-animate="features-wrapper"]');

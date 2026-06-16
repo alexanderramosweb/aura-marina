@@ -43,3 +43,15 @@
 .button:active {
   transform: translateY(0);
 }
+/* ==========================================
+   RESPONSIVE / RESPONSIVE VARIANTS
+========================================== */
+
+/* Mobile First o Desktop First según tu arquitectura. 
+   Asumiendo un enfoque Desktop-First para aislar el comportamiento Mobile: */
+@media (max-width: 768px) {
+  .button {
+    display: flex; /* Cambiamos a flex para que el comportamiento de bloque/ancho completo sea natural */
+    width: 100%;
+  }
+}
