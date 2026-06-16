@@ -27,22 +27,40 @@
 
   transition:
     background-color 200ms ease,
-    transform 200ms ease;
+    transform 200ms ease,
+    box-shadow 200ms ease;
 }
+
+/* ==========================================
+   BUTTON HOVER ANIMATION
+========================================== */
 
 .button:hover {
   background-color: var(--color-action-hover);
 
   transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
+
+/* ==========================================
+   BUTTON ACTIVE STATE
+========================================== */
+
+.button:active {
+  transform: translateY(1px);
+}
+
+/* ==========================================
+   BUTTON FOCUS STATE
+========================================== */
 
 .button:focus-visible {
   outline: 2px solid var(--color-action-primary);
+
   outline-offset: 4px;
 }
-.button:active {
-  transform: translateY(0);
-}
+
 /* ==========================================
    RESPONSIVE / RESPONSIVE VARIANTS
 ========================================== */

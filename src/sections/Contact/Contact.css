@@ -285,22 +285,40 @@
   transition:
     background-color 200ms ease,
     transform 200ms ease,
-    opacity 200ms ease;
+    opacity 200ms ease,
+    box-shadow 200ms ease;
 }
+
+/* ==========================================
+   CONTACT BUTTON HOVER ANIMATION
+========================================== */
+
 .contact__button:hover {
   opacity: 0.95;
 
   transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
+/* ==========================================
+   CONTACT BUTTON ACTIVE STATE
+========================================== */
+
 .contact__button:active {
-  transform: translateY(0);
+  transform: translateY(1px);
 }
+
+/* ==========================================
+   CONTACT BUTTON FOCUS STATE
+========================================== */
 
 .contact__button:focus-visible {
   outline: 2px solid var(--color-surface-primary);
+
   outline-offset: 4px;
 }
+
 /* ==========================================
    CONTACT BUTTON ICON
 ========================================== */
