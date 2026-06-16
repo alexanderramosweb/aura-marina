@@ -8,6 +8,7 @@ import { initAdvantages } from "./advantages";
 import { initPricing } from "./pricing";
 import { initLocation } from "./location";
 import { initContact } from "./contact";
+import { initFooter } from "./footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,4 +26,6 @@ export function initAnimations() {
   initLocation();
 
   initContact();
+
+  initFooter();
 }

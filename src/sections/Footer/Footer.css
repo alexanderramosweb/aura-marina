@@ -38,28 +38,25 @@
 
   gap: var(--space-4);
 }
+/* ==========================================
+   FOOTER SOCIAL HOVER ANIMATION
+========================================== */
 .footer__social-link {
   display: flex;
   align-items: center;
   justify-content: center;
 
   transition:
-    opacity 200ms ease,
-    transform 200ms ease;
+    opacity 250ms ease,
+    transform 250ms ease;
 }
 
 .footer__social-link:hover {
-  opacity: 0.8;
+  opacity: 1;
 
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.08);
 }
 
-.footer__social-link:focus-visible {
-  outline: 2px solid var(--color-action-primary);
-  outline-offset: 4px;
-
-  border-radius: var(--radius-full);
-}
 .footer__social-icon {
   width: 1.5rem;
   height: 1.5rem;
