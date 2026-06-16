@@ -10,6 +10,18 @@
 }
 
 /* ==========================================
+   LOCATION CARD HOVER ANIMATION
+========================================== */
+
+.location-card__image img {
+  transition: transform 0.8s ease;
+}
+
+.location-card:hover .location-card__image img {
+  transform: scale(1.06);
+}
+
+/* ==========================================
    LOCATION CARD IMAGE
 ========================================== */
 
