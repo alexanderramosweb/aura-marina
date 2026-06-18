@@ -35,9 +35,13 @@ const {
   <body>
     <slot />
     <script>
-      import("../animations").then(({ initAnimations }) => {
-        initAnimations();
-      });
+      Promise.all([import("../animations"), import("../smooth-scroll")]).then(
+        ([animations, smoothScroll]) => {
+          smoothScroll.initSmoothScroll();
+
+          animations.initAnimations();
+        },
+      );
     </script>
   </body>
 </html>
