@@ -35,7 +35,7 @@ import "./Contact.css";
     <div class="contact__layout" data-animate="contact-layout">
       <div class="contact__content" data-animate="contact-content">
         <div class="contact__info">
-          <h2 id="contact-title" class="contact__title">AURA MARINA</h2>
+          <h2 id="contact-title" class="contact__title">Habla con un asesor</h2>
 
           <p class="contact__description">
             Reserva tu villa en el lugar más exclusivo de Santa Marta
@@ -82,19 +82,49 @@ import "./Contact.css";
 
       <form class="contact__form" data-animate="contact-form">
         <div class="contact__form-column">
-          <input class="contact__input" type="text" placeholder="Nombre" />
+          <label for="name" class="sr-only"> Nombre </label>
 
           <input
+            id="name"
+            name="name"
             class="contact__input"
-            type="tel"
-            placeholder="Teléfono / WhatsApp"
+            type="text"
+            autocomplete="name"
+            placeholder="Nombre"
+            required
           />
 
-          <input class="contact__input" type="email" placeholder="Email" />
+          <label for="phone" class="sr-only"> Teléfono o WhatsApp </label>
+
+          <input
+            id="phone"
+            name="phone"
+            class="contact__input"
+            type="tel"
+            autocomplete="tel"
+            placeholder="Teléfono / WhatsApp"
+            required
+          />
+
+          <label for="email" class="sr-only"> Correo electrónico </label>
+
+          <input
+            id="email"
+            name="email"
+            class="contact__input"
+            type="email"
+            autocomplete="email"
+            placeholder="Email"
+            required
+          />
         </div>
 
         <div class="contact__form-column">
+          <label for="message" class="sr-only"> Tipo de villa que busca </label>
+
           <textarea
+            id="message"
+            name="message"
             class="contact__textarea"
             placeholder="Cuéntanos qué tipo de villa estás buscando"></textarea>
 
