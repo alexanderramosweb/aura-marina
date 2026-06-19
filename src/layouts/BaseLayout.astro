@@ -5,103 +5,162 @@ import openGraphImage from "../assets/images/seo/open-graph.webp";
 interface Props {
   title?: string;
   description?: string;
-
   canonical?: string;
   ogImage?: string;
-
+  ogType?: "website" | "article" | "product";
   siteName?: string;
+  lang?: string;
+  country?: string;
+  robots?: string;
+  author?: string;
+  keywords?: string;
+  themeColor?: string;
+  customSchema?: object | object[]; // acepta un schema o un array de schemas
 }
 
 const {
   title = "Aura Marina",
   description = "Proyecto residencial frente al mar.",
-
-  canonical = "",
-
+  canonical = Astro.url.href,
   ogImage = openGraphImage.src,
-
+  ogType = "website",
   siteName = "Aura Marina",
+  lang = "es",
+  country = "CO",
+  robots = "index, follow",
+  author = siteName,
+  keywords,
+  themeColor = "#0a0a0a",
+  customSchema,
 } = Astro.props;
 
-//Schema.org
+// URL absoluta para OG image (crítico para agentes IA y redes sociales)
+const absoluteOgImage = new URL(ogImage, Astro.site ?? Astro.url.origin).href;
 
-const schema = {
+// Creamos la combinación perfecta para Open Graph (ej: "es_CO")
+const ogLocale = `${lang}_${country.toUpperCase()}`;
+
+// ── Schema.org ──────────────────────────────────────────────────────────────
+// Si la página pasa su propio schema (o array), se usa tal cual.
+// Si no pasa nada, se inyecta un fallback mínimo para que la página
+// nunca quede sin datos estructurados.
+// Cada landing define su schema personalizado a su ritmo — sin presiones.
+const defaultSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "RealEstateAgent",
   name: siteName,
   description,
+  url: canonical,
+  image: absoluteOgImage,
 };
+
+// Normaliza siempre a array para soportar múltiples schemas por página
+const schemasToInject = customSchema
+  ? Array.isArray(customSchema)
+    ? customSchema
+    : [customSchema]
+  : [defaultSchema];
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ── SEO Core ─────────────────────────────────────────────────────── -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <meta name="author" content={author} />
+    {keywords && <meta name="keywords" content={keywords} />}
+
+    <!-- URL canónica automática (evita contenido duplicado ante la IA) -->
+    <link rel="canonical" href={canonical} />
+
+    <!-- ── Favicons ──────────────────────────────────────────────────────── -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content={themeColor} />
+
+    <!-- ── Open Graph ───────────────────────────────────────────────────── -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={absoluteOgImage} />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={ogLocale} />
+
+    <!-- ── Twitter Card ──────────────────────────────────────────────────── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteOgImage} />
+    <meta name="twitter:image:alt" content={title} />
+
+    <!-- ── Fuentes ───────────────────────────────────────────────────────── -->
+    <!--
+      Preload de fuentes críticas primero → luego preconnect.
+      Esto reduce el Cumulative Layout Shift (CLS) que mide la IA en Core Web Vitals.
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
 
-    <title>{title}</title>
+    <!-- ── Schema.org ────────────────────────────────────────────────────── -->
+    <!--
+      Un solo <script type="application/ld+json"> con array de schemas.
+      Google y los agentes de IA aceptan perfectamente este formato.
+      Cada landing puede pasar su schema personalizado desde la página.
 
-    <meta name="description" content={description} />
+      EJEMPLO DE USO EN UNA LANDING:
+      ---
+      const mySchema = {
+        "@context": "https://schema.org",
+        "@type": "Apartment",
+        name: "Torre A – Aura Marina",
+        ...
+      };
+      ---
+      <BaseLayout customSchema={mySchema}>
+    -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(
+        schemasToInject.length === 1 ? schemasToInject[0] : schemasToInject,
+      )}
+    />
 
-    <!-- Favicons -->
-
-    <link rel="icon" href="/favicon_auramarina.ico" sizes="any" />
-
-    <link rel="icon" href="/favicon_auramarina.svg" type="image/svg+xml" />
-
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-    {canonical && <link rel="canonical" href={canonical} />}
-
-    <!-- Open Graph - SEO social.-->
-
-    <meta property="og:title" content={title} />
-
-    <meta property="og:description" content={description} />
-
-    <meta property="og:image" content={ogImage} />
-    <!-- Esta es la miniatura. -->
-
-    <meta property="og:type" content="website" />
-    <!-- Le indica a Open Graph: Esto es un sitio web. -->
-
-    <meta property="og:site_name" content={siteName} />
-    <!-- Es el nombre oficial de la marca. -->
-
-    <!-- Twitter Card -->
-
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <meta name="twitter:title" content={title} />
-
-    <meta name="twitter:description" content={description} />
-
-    <meta name="twitter:image" content={ogImage} />
-
-    <!-- Schema.org - SEO semántico para buscadores e IA.-->
-
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <!-- Slot para scripts o meta tags adicionales por página -->
+    <slot name="head" />
   </head>
 
   <body>
+    <!-- Contenido visual de la landing (secciones, hero, formularios, etc.) -->
     <slot />
+
+    <!-- Scripts de animación y scroll diferidos para no bloquear el render -->
     <script>
       Promise.all([import("../animations"), import("../smooth-scroll")]).then(
         ([animations, smoothScroll]) => {
           smoothScroll.initSmoothScroll();
-
           animations.initAnimations();
         },
       );
     </script>
+
+    <!-- Slot para scripts adicionales por página (analytics, pixel, etc.) -->
+    <slot name="body-scripts" />
   </body>
 </html>
