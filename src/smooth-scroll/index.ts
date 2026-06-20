@@ -2,8 +2,9 @@ import Lenis from "lenis";
 
 export function initSmoothScroll() {
   const lenis = new Lenis({
-    duration: 1.2,
+    duration: 5,
     smoothWheel: true,
+    anchors: true,
   });
 
   function raf(time: number) {

@@ -80,7 +80,12 @@ import "./Contact.css";
         </div>
       </div>
 
-      <form class="contact__form" data-animate="contact-form">
+      <form
+        action="https://formspree.io/f/xpqevjlk"
+        method="POST"
+        class="contact__form"
+        data-animate="contact-form"
+      >
         <div class="contact__form-column">
           <label for="name" class="sr-only"> Nombre </label>
 
@@ -133,6 +138,7 @@ import "./Contact.css";
 
             <span class="contact__button-icon" aria-hidden="true"> → </span>
           </button>
+          <p class="contact__status" aria-live="polite"></p>
         </div>
       </form>
     </div>

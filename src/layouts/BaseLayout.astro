@@ -152,12 +152,17 @@ const schemasToInject = customSchema
 
     <!-- Scripts de animación y scroll diferidos para no bloquear el render -->
     <script>
-      Promise.all([import("../animations"), import("../smooth-scroll")]).then(
-        ([animations, smoothScroll]) => {
-          smoothScroll.initSmoothScroll();
-          animations.initAnimations();
-        },
-      );
+      Promise.all([
+        import("../animations"),
+        import("../smooth-scroll"),
+        import("../forms/contact-form"),
+      ]).then(([animations, smoothScroll, contactForm]) => {
+        smoothScroll.initSmoothScroll();
+
+        animations.initAnimations();
+
+        contactForm.initContactForm();
+      });
     </script>
 
     <!-- Slot para scripts adicionales por página (analytics, pixel, etc.) -->

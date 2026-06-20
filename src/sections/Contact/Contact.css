@@ -353,6 +353,19 @@
 }
 
 /* ==========================================
+   CONTACT STATUS
+========================================== */
+
+.contact__status {
+  min-height: 1.5rem;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
+
+  color: var(--color-surface-primary);
+}
+
+/* ==========================================
    CONTACT RESPONSIVE
    Tablet ≤ 1024px
 ========================================== */
