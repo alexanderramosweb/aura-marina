@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://aura-marina.vercel.app/sitemap-index.xml
