@@ -1,3 +1,11 @@
+
+
+https://github.com/user-attachments/assets/6937fc12-46cd-49e2-9649-215cc1444f57
+
+
+
+https://github.com/user-attachments/assets/41162139-1add-4fb4-b624-4a65f023ba2f
+
 # Aura Marina | Landing Page de Lujo - Real Estate en Santa Marta
 
 Landing page de conversión enfocada en captar y calificar leads para un proyecto residencial premium frente al mar.
