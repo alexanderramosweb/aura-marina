@@ -1,18 +1,8 @@
-
-
-https://github.com/user-attachments/assets/6937fc12-46cd-49e2-9649-215cc1444f57
-
-
-
-https://github.com/user-attachments/assets/41162139-1add-4fb4-b624-4a65f023ba2f
-
 # Aura Marina | Landing Page de Lujo - Real Estate en Santa Marta
 
 Landing page de conversión enfocada en captar y calificar leads para un proyecto residencial premium frente al mar.
 
 ---
-
-## Descripción
 
 **Aura Marina** es un proyecto residencial premium ubicado en Santa Marta, Colombia, que requería una presencia digital capaz de convertir visitantes en leads cualificados.
 
@@ -49,6 +39,12 @@ La landing page fue diseñada con un enfoque **100% orientado a conversión**: c
 | ![Hero Section - Studio Arch Premium](./public/readme-media/aura-marina-c.webp) | ![Contacto Section - Studio Arch Premium](./public/readme-media/aura-marina-cta.webp) |
 
 ---
+
+## Animaciones
+
+<p align="center">
+<video src="https://github.com/user-attachments/assets/41162139-1add-4fb4-b624-4a65f023ba2f" autoplay loop muted width="80%"></video>
+</p>
 
 ## Características
 
