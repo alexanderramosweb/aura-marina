@@ -367,12 +367,12 @@ npm run build
 
 Este enfoque (Astro + Formspree + SEO + Conversion-First Design) funciona para cualquier proyecto inmobiliario, arquitectónico o de lead generation.
 
-| Medio    | Enlace                                                                                                                       |
-| :------- | :--------------------------------------------------------------------------------------------------------------------------- |
-| Email    | <a href="mailto:alexander.digitaldev@gmail.com" target="_blank" rel="noopener noreferrer">alexander.digitaldev@gmail.com</a> |
-| WhatsApp | <a href="https://wa.me/573127087551" target="_blank" rel="noopener noreferrer">+57 312 708 7551</a>                          |
-| LinkedIn | <a href="https://linkedin.com/in/TUPERFIL" target="_blank" rel="noopener noreferrer">linkedin.com/in/TUPERFIL</a>            |
-| Behance  | <a href="https://behance.net/TUPERFIL" target="_blank" rel="noopener noreferrer">behance.net/TUPERFIL</a>                    |
+| Medio | Enlace |
+| :--- | :--- |
+| **Email** | <a href="mailto:alexander.digitaldev@gmail.com" target="_blank" rel="noopener noreferrer">alexander.digitaldev@gmail.com</a> |
+| **WhatsApp** | <a href="https://wa.me/573127087551" target="_blank" rel="noopener noreferrer">+57 312 708 7551</a> |
+| **LinkedIn** | <a href="https://www.linkedin.com/in/alexanderramosweb/" target="_blank" rel="noopener noreferrer">linkedin.com/in/alexanderramosweb</a> |
+| **Behance** | <a href="https://www.behance.net/alexanderwebdesign" target="_blank" rel="noopener noreferrer">behance.net/alexanderwebdesign</a> | 
 
 ---
 
