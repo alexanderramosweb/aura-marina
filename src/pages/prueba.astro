@@ -1,0 +1,26 @@
+---
+import { actions } from "astro:actions";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prueba Backend</title>
+  </head>
+
+  <body>
+    <h1>Prueba Create Lead</h1>
+
+    <form action={actions.createLead} method="POST">
+      <input type="text" name="name" placeholder="Nombre" />
+
+      <input type="email" name="email" placeholder="Correo electrónico" />
+
+      <input type="tel" name="phone" placeholder="Teléfono" />
+
+      <input type="hidden" name="source" value="manual" />
+
+      <button type="submit"> Enviar </button>
+    </form>
+  </body>
+</html>
