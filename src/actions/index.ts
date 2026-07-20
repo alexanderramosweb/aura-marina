@@ -1,6 +1,6 @@
 import { defineAction } from "astro:actions";
 import { z } from "astro/zod";
-import { InMemoryLeadRepository } from "../infrastructure/leads/repositories/in-memory-lead.repository";
+import { GoogleSheetsLeadRepository } from "../infrastructure/leads/repositories/google-sheets-lead.repository";
 
 import { CreateLeadUseCase } from "../application/leads/use-cases/create-lead.use-case";
 
@@ -16,11 +16,11 @@ export const server = {
     }),
 
     async handler(input) {
-      const leadRepository = new InMemoryLeadRepository();
+      const leadRepository = new GoogleSheetsLeadRepository();
 
       const createLeadUseCase = new CreateLeadUseCase(leadRepository);
 
-      return createLeadUseCase.execute(input);
+      return await createLeadUseCase.execute(input);
     },
   }),
 };
